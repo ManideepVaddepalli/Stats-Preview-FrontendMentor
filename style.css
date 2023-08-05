@@ -1,0 +1,117 @@
+html{box-sizing: border-box;
+    font-size: 100%;}
+*,*::after,*::before{box-sizing: inherit;}
+/* font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif; */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(233, 47%, 7%);
+}
+main{
+    border-radius: 0.625rem;
+    background-color: hsl(244, 38%, 16%);
+    width:18.75rem;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.topimg{
+    align-items: center;
+    width: inherit;
+    aspect-ratio: 15 / 11;
+    background-repeat: no-repeat;
+    background-image: url('images/image-header-mobile.jpg');
+    background-size: contain;
+}
+.colorgrad{
+    width: inherit;
+    aspect-ratio: 15 / 11;
+    mix-blend-mode: overlay;
+    background-color: hsl(277, 64%, 61%);
+}
+.botcont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botcont h2{
+    margin:1.875rem 1.875rem 0.625rem 1.875rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+.botcont span{
+    color: hsl(277, 64%, 61%);
+}
+.botcont p1{
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0.625rem 1.875rem 0.625rem 1.875rem;
+    line-height: 1.5rem;
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+.comp{
+    margin:0px 0.625rem 1.25rem 0.625rem;
+    display: flex;
+    flex-direction: column;
+}
+.common{
+    margin: 0.625rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+.common h3{
+    line-height: 1.875rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    margin:0px}
+.common h6{
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    margin:0px;
+    color: hsla(0, 0%, 100%, 0.6);    
+}
+
+@media (min-width:767px) {
+    body{height: 100vh;}
+    main{
+        width: fit-content;
+        height: 21.875rem;
+        flex-direction: row-reverse;
+        }
+    .topimg{
+        height:21.875rem;
+        aspect-ratio: 270/223;
+        background-image: url('images/image-header-desktop.jpg');
+    }
+    .colorgrad{
+        height: inherit;
+        aspect-ratio: 270/223;
+    }
+    .botcont{
+        align-items: start;
+        text-align: start;
+    }
+    .botcont h2{
+        text-align: start;
+    }
+    .botcont p1{
+        text-align: start;
+    }
+    .comp{
+        margin:0.625rem 1.875rem 1.25rem 1.875rem;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        width: 75%;
+    }
+}
